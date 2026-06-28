@@ -1,0 +1,71 @@
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { background-color: #f8fafc; color: #1e293b; }
+
+/* 3. LOGO NHÂN KÍCH THƯỚC LỚN GẤP 3 LẦN RÕ NÉT */
+.logo-img-large { 
+    width: 135px !important; 
+    height: 55px !important; 
+    object-fit: contain; 
+}
+
+/* 1. SLIDER CHỐNG CROP VÀ KHÔNG BỊ MẤT GÓC HÌNH */
+.hero-slide-img {
+    height: 380px;
+    object-fit: contain; /* Co giãn thu phóng vừa vặn lòng khung, không cắt xén góc ảnh */
+    background-color: #e2e8f0; /* Nền xám nhạt lắp các khoảng trống cân đối */
+}
+
+/* HIỆU ỨNG HOVER NẢY NÚT ĐIỀU HƯỚNG */
+.btn-cta-services {
+    background-color: #f59e0b;
+    color: #1e293b;
+    font-weight: 700;
+    font-size: 18px;
+    padding: 12px 35px;
+    border-radius: 30px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-cta-services:hover {
+    background-color: #d97706;
+    color: white;
+    transform: translateY(-3px) scale(1.04); /* Phóng nhẹ 4% và nổi lên */
+    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
+}
+
+/* CARDS SẢN PHẨM & TIN TỨC */
+.card-product {
+    background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+.card-product:hover {
+    transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0, 75, 147, 0.08) !important;
+}
+.card-img-placeholder {
+    width: 100%; height: 170px; background-color: #f1f5f9;
+    display: flex; align-items: center; justify-content: center; position: relative;
+}
+.card-img-actual { width: 100%; height: 100%; object-fit: cover; }
+.price-text { font-size: 26px; font-weight: 800; color: #ef4444; }
+
+.card-news { border-radius: 14px; transition: transform 0.2s ease; background: #fff; }
+.card-news:hover { transform: translateY(-4px); box-shadow: 0 6px 15px rgba(0,0,0,0.05); }
+.news-thumb { width: 100%; height: 165px; object-fit: cover; }
+
+/* BACK TO TOP */
+#backToTopBtn {
+    display: none; position: fixed; bottom: 25px; right: 25px; z-index: 99;
+    border: none; background-color: #004b93; color: white; width: 45px; height: 45px;
+    border-radius: 50%; font-size: 24px; align-items: center; justify-content: center;
+    cursor: pointer; transition: background 0.2s;
+}
+#backToTopBtn:hover { background-color: #f59e0b; }
+
+@media (max-width: 768px) {
+    .hero-slide-img { height: 220px; }
+    .logo-img-large { width: 95px !important; height: 40px !important; }
+}

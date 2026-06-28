@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bộ Sưu Tập & Bản Tin - VNPT Digishop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="../index.html">
+                <img src="../assets/images/logo-vnpt.jpg" alt="Logo VNPT" class="logo-img-large" onerror="this.src='https://placehold.co/135x60?text=VNPT+LOGO'">
+                <span class="fw-bold text-dark fs-3 ms-3">VNPT <span class="text-primary">Digishop</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#vnptNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="vnptNavbar">
+                <ul class="navbar-nav ms-auto fw-semibold fs-5">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Trang Chủ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./about.html">Giới Thiệu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./services.html">Gói Cước</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="./gallery.html">Bộ Sưu Tập</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contact.html">Liên Hệ</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-5">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="list-group shadow-sm sticky-top" style="top: 100px;">
+                    <div class="list-group-item bg-primary text-white fw-bold py-3">Danh Sách Bản Tin</div>
+                    <a href="?news=1" class="list-group-item list-group-item-action fw-semibold py-3" id="lnk-news-1">1. Khuyến mại Siêu bão Vàng VinaPhone</a>
+                    <a href="?news=2" class="list-group-item list-group-item-action fw-semibold py-3" id="lnk-news-2">2. MyTV ra mắt gói cước VIP & SVIP</a>
+                    <a href="?news=3" class="list-group-item list-group-item-action fw-semibold py-3" id="lnk-news-3">3. Sự kiện 30 Năm Phụng Sự VinaPhone</a>
+                </div>
+            </div>
+
+            <div class="col-md-8">
+                <div class="bg-white p-4 rounded-4 shadow-sm border text-start" id="newsDisplayArea">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4 text-start">
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-white mb-3">Thông tin liên hệ</h5>
+                    <p class="text-white-50 small mb-2"><i class="bi bi-geo-alt-fill text-primary me-2"></i>Địa chỉ: 03 Lưu Tấn Tài, Phường Tân Thành, Tỉnh Cà Mau[cite: 1005].</p>
+                    <p class="text-white-50 small mb-2"><i class="bi bi-telephone-fill text-primary me-2"></i>Hotline: 18001166 [cite: 1006]</p>
+                    <p class="text-white-50 small"><i class="bi bi-envelope-fill text-primary me-2"></i>Email: vnptcamau@vnpt.vn [cite: 1006]</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-white mb-3">Hỗ trợ khách hàng</h5>
+                    <p class="text-white-50 small mb-2">Tổng đài Internet/MyTV: 18001166 [cite: 859]</p>
+                    <p class="text-white-50 small"><i class="bi bi-envelope text-primary me-2"></i>Email KHTT: cskh@vnpt.vn [cite: 859]</p>
+                </div>
+                <div class="col-md-4">
+                    <h5 class="fw-bold text-white mb-3">Hệ sinh thái Digishop</h5>
+                    <p class="text-white-50 small">Website trực tuyến của VNPT VinaPhone, cung cấp dịch vụ Internet, Truyền hình, Di động tiện lợi[cite: 1004].</p>
+                </div>
+            </div>
+            <hr class="border-secondary my-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center text-white-50 small">
+                <p class="mb-2 mb-md-0">&copy; 2026 VNPT Digishop Project[cite: 1007].</p>
+                <p class="mb-0">Phát triển bởi: <b>Nhóm 5</b> [cite: 1032]</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTopBtn"><i class="bi bi-arrow-up-short"></i></button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    
+    <script>
+        const newsRepository = {
+            "1": {
+                title: "“Siêu bão Vàng – Ngàn may mắn” với kho giải thưởng gần 7 tỷ đồng từ VinaPhone",
+                img: "../assets/images/bangtin-1.jpg",
+                text: `Tri ân khách hàng dịp năm mới, VinaPhone khuyến mại gần 7 tỷ đồng với hàng ngàn giải thưởng giá trị bao gồm 40 cây vàng SJC 9999, 360 chỉ vàng SJC 9999, 888 smartphone[cite: 830]. Chương trình được áp dụng từ ngày 25/12/2023 đến hết 18/02/2024 cho tất cả thuê bao VinaPhone hòa mạng mới hoặc đăng ký gói cước từ 20.000đ[cite: 835, 838]. Người dùng lắp đặt mới Internet VNPT cũng có cơ hội tham gia trúng giải lớn[cite: 840].`
+            },
+            "2": {
+                title: "MyTV RA MẮT GÓI VIP & SVIP – MỘT CHẠM, VẠN TRẢI NGHIỆM",
+                img: "../assets/images/bangtin-2.jpg",
+                text: `MyTV chính thức giới thiệu hai gói cước mới – VIP và SVIP – dành cho khách hàng sử dụng đa nhà mạng tại Việt Nam[cite: 862]. Với kho nội dung phong phú gồm hơn 130 kênh đặc sắc đối với gói VIP (giá từ 59k/tháng) và gần 180 kênh truyền hình thể thao K+, SCTV, VTVcab trọn vẹn giải Ngoại hạng Anh đối với gói cao cấp SVIP (giá 199k/tháng)[cite: 870, 876, 880, 884].`
+            },
+            "3": {
+                title: "30 Năm Phụng Sự - Triệu Quà Tri Ân: Vinh danh Hội viên gắn bó lâu năm",
+                img: "../assets/images/bangtin-3.jpg",
+                text: `Nằm trong chuỗi hoạt động kỷ niệm cột mốc 30 năm, VinaPhone chính thức ra mắt chương trình “Trao tặng danh hiệu Vina30” áp dụng từ ngày 15/06 đến hết ngày 31/12/2026[cite: 898]. Chương trình dành cho toàn bộ Hội viên VinaPhone Plus có thời gian sử dụng liên tục từ 25 năm trở lên, mang lại đặc quyền miễn phí phòng chờ thương gia sân bay trọn đời[cite: 898, 927].`
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const activeId = urlParams.get('news') || "1";
+        const selectedNews = newsRepository[activeId];
+
+        // Đổi trạng thái active trên thanh menu bên
+        const activeLink = document.getElementById(`lnk-news-${activeId}`);
+        if(activeLink) activeLink.classList.add("active", "bg-primary", "text-white");
+
+        // Đổ dữ liệu văn bản vào khu vực chính
+        const displayArea = document.getElementById("newsDisplayArea");
+        if (selectedNews && displayArea) {
+            displayArea.innerHTML = `
+                <h3 class="fw-bold text-dark mb-3">${selectedNews.title}</h3>
+                <div class="news-main-img-box text-center my-4 border rounded-3 p-2 bg-light">
+                    <img src="${selectedNews.img}" class="img-fluid rounded" alt="Hình ảnh bản tin" style="max-height:420px; object-fit:contain;" onerror="this.src='https://placehold.co/800x400?text=VNPT+NEWS+IMAGE'">
+                </div>
+                <p class="fs-5 text-secondary" style="line-height:1.7; text-align:justify;">${selectedNews.text}</p>
+                <div class="mt-4 border-top pt-3">
+                    <a href="../index.html" class="btn btn-sm btn-outline-primary fw-bold"><i class="bi bi-house-door me-1"></i> Quay về Trang Chủ</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
