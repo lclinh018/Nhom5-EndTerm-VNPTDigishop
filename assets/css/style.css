@@ -2,21 +2,18 @@
 html { scroll-behavior: smooth; }
 body { background-color: #f8fafc; color: #1e293b; }
 
-/* 3. LOGO NHÂN KÍCH THƯỚC LỚN GẤP 3 LẦN RÕ NÉT */
 .logo-img-large { 
     width: 135px !important; 
     height: 55px !important; 
     object-fit: contain; 
 }
 
-/* 1. SLIDER CHỐNG CROP VÀ KHÔNG BỊ MẤT GÓC HÌNH */
 .hero-slide-img {
     height: 380px;
-    object-fit: contain; /* Co giãn thu phóng vừa vặn lòng khung, không cắt xén góc ảnh */
-    background-color: #e2e8f0; /* Nền xám nhạt lắp các khoảng trống cân đối */
+    object-fit: contain;
+    background-color: #e2e8f0;
 }
 
-/* HIỆU ỨNG HOVER NẢY NÚT ĐIỀU HƯỚNG */
 .btn-cta-services {
     background-color: #f59e0b;
     color: #1e293b;
@@ -33,30 +30,52 @@ body { background-color: #f8fafc; color: #1e293b; }
 .btn-cta-services:hover {
     background-color: #d97706;
     color: white;
-    transform: translateY(-3px) scale(1.04); /* Phóng nhẹ 4% và nổi lên */
-    box-shadow: 0 8px 20px rgba(217, 119, 6, 0.3);
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 10px 25px rgba(217, 119, 6, 0.4);
 }
 
-/* CARDS SẢN PHẨM & TIN TỨC */
-.card-product {
-    background: #ffffff; border: 1px solid #e2e8f0; border-radius: 16px;
-    transition: transform 0.25s, box-shadow 0.25s;
+/* 4. TĂNG ĐỘ TƯƠNG PHẢN ĐỔ BÓNG KHI HOVER CARD GÓI CƯỚC VÀ CÁC THẺ */
+.card-product, .card-news, .list-group, form {
+    background: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 16px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
-.card-product:hover {
-    transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0, 75, 147, 0.08) !important;
+
+.card-product:hover, .card-news:hover {
+    transform: translateY(-6px); 
+    box-shadow: 0 15px 30px rgba(0, 75, 147, 0.18) !important; /* Đổ bóng đậm hơn rõ nét */
+    border-color: #3b82f6;
 }
+
+/* ================= KHỐI SỬA LỖI HIỂN THỊ BOX TRÊN TRANG SERVICES ================= */
+
+/* 1. Ẩn hoàn toàn icon chiếc hộp (box-seam) khi trình duyệt đã tải được ảnh thật */
+.card-img-placeholder i.bi-box-seam {
+    display: none !important;
+}
+
+/* 2. Xóa bỏ màu nền xám (tác nhân tạo cảm giác box 3D bao quanh ảnh) */
 .card-img-placeholder {
-    width: 100%; height: 170px; background-color: #f1f5f9;
-    display: flex; align-items: center; justify-content: center; position: relative;
+    background-color: transparent !important;
+    height: auto !important; /* Tự động co giãn theo chiều cao chuẩn của ảnh gói cước */
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
-.card-img-actual { width: 100%; height: 100%; object-fit: cover; }
+
+/* 3. Cấu hình định dạng ảnh gói cước hiển thị trọn vẹn 100%, không bị méo hay vỡ khung */
+.card-img-actual {
+    width: 80% !important;
+    height: 80% !important;
+    object-fit: contain !important; /* Giữ nguyên tỷ lệ gốc của ảnh gói cước VNPT */
+}
 .price-text { font-size: 26px; font-weight: 800; color: #ef4444; }
 
-.card-news { border-radius: 14px; transition: transform 0.2s ease; background: #fff; }
-.card-news:hover { transform: translateY(-4px); box-shadow: 0 6px 15px rgba(0,0,0,0.05); }
 .news-thumb { width: 100%; height: 165px; object-fit: cover; }
 
-/* BACK TO TOP */
 #backToTopBtn {
     display: none; position: fixed; bottom: 25px; right: 25px; z-index: 99;
     border: none; background-color: #004b93; color: white; width: 45px; height: 45px;
