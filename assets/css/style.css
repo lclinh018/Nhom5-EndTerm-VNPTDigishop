@@ -68,8 +68,8 @@ body { background-color: #f8fafc; color: #1e293b; }
 
 /* 3. Cấu hình định dạng ảnh gói cước hiển thị trọn vẹn 100%, không bị méo hay vỡ khung */
 .card-img-actual {
-    width: 80% !important;
-    height: 80% !important;
+    width: 100% !important; /* Trả về 100% để không làm nhỏ các gói cước bên tab services */
+    height: 100% !important;
     object-fit: contain !important; /* Giữ nguyên tỷ lệ gốc của ảnh gói cước VNPT */
 }
 .price-text { font-size: 26px; font-weight: 800; color: #ef4444; }
@@ -87,4 +87,13 @@ body { background-color: #f8fafc; color: #1e293b; }
 @media (max-width: 768px) {
     .hero-slide-img { height: 220px; }
     .logo-img-large { width: 95px !important; height: 40px !important; }
+}
+
+/* ================= ĐOẠN THÊM MỚI: THU NHỎ ẢNH TRÊN TRANG ABOUT ================= */
+
+/* Nhắm trực tiếp vào thẻ img nằm trong phần text-center của trang Giới thiệu */
+.text-center img[src*="cskh-vnpt.jpg"] {
+    width: 80% !important;
+    height: auto !important;
+    display: inline-block;
 }
