@@ -1,6 +1,6 @@
 // MẢNG DỮ LIỆU ĐẦY ĐỦ CÁC GÓI CƯỚC THEO YÊU CẦU ĐỀ BÀI (ĐÃ CẬP NHẬT TÊN ẢNH .JPG)
 const productData = [
-    { name: "HOME INTERNET", category: "wifi", desc: "Gói cước mạng thuần cáp quang siêu tốc 150 Mbps ổn định.", price: "165.000", image: "Home.jpg" },
+    { name: "HOME INTERNET", category: "wifi", desc: "Gói cước mạng thuần cáp quang siêu tốc 150 Mbps ổn định.", price: "165.000", image: "home.jpg" },
     { name: "HOMETV 1", category: "wifi", desc: "Mạng cáp quang tốc độ cao + Gói truyền hình MyTV đặc sắc đa kênh.", price: "215.000", image: "hometv1.jpg" },
     { name: "HOME MESH 2+", category: "wifi", desc: "Băng thông mạng 250 Mbps + Có thiết bị Wifi Mesh tăng sóng xuyên tường.", price: "210.000", image: "homemesh2.jpg" },
     { name: "HOME CAM 1", category: "wifi", desc: "Tốc độ 150 Mbps + Trang bị sẵn thiết bị Camera Indoor an ninh.", price: "215.000", image: "homecam1.jpg" },
